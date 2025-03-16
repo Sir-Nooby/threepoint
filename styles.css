@@ -1,0 +1,60 @@
+.header_bar {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #cfcfa9;
+    
+}
+
+#logo {
+    text-align: left;
+    font-size: 120%;
+}
+
+#title {
+    size: 50%;
+}
+
+
+
+/* Interactive Elements */
+.input_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10vh;
+    font-size: 3vw;
+    position: relative;
+    gap: 5vw;
+}
+
+.info-options {
+    background-color: rgb(203, 198, 156);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    font-size: 4vh;
+    width: 55%;
+    margin: 8vh auto 0;
+    position: relative;
+    gap: 8vw;
+}
+
+#score {
+    font-size: 2vw;
+}
+
+#user_input {
+    border: none;
+    text-align: center;
+    padding-left: 0vw;
+    width: 5vw;
+    height: 10vh;
+}
+
+
+body {
+    background-color: rgb(246, 241, 241);
+}
+
