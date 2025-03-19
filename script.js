@@ -107,5 +107,6 @@ digit.addEventListener("input", (event) => {
     }
     else {
         document.getElementById("score").textContent = "X"
+        console.log("The correct input is: " + pi[current_digit])
     }
 })
