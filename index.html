@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="header_bar">
+    <div class="header-bar">
         <p id="logo"> Three Point </p>
     </div>
 
@@ -28,23 +28,48 @@
     <p> || </p>
     <p id="score">0</p>
     <p> || </p>
-    <p> Settings </p>
+    <button id="settings-button"> Settings </button>
 </div>
 
 <div class="input_area">
-    <u id="past_digit1">?</u>
-    <u id="past_digit2">?</u>
-    <u id="past_digit3">3</u>
-    <u id="past_digit4">.</u>
+    <span id="past_digit1"></span>
+    <span id="past_digit2"></span>
+    <span id="past_digit3">3</span>
+    <span id="past_digit4">.</span>
     <input id="user_input" type="tel" placeholder="?">
 </div>
 
+<!-- Settings -->
+<div id="settings" class="overlay">
+    <div class="settings-content">
+        <h2> Settings </h2>
 
+        <div class="setting-option">
+            <label for="contrast-mode"> High Contrast Mode </label>
+            <input type="checkbox" id="contrast-mode">
+        </div>
+        
+        <!-- <div class="setting-option">
+            <label for="reset-score"> Test </label>
+            <input type="checkbox" id="reset-score">
+        </div> -->
 
-<!-- Create the skeleton of the website
+        <div class="setting-option">
+            <label for="theme"> Theme </label>
+            <select id="theme">
+                <option value="#f7f7f0,#cbc69c,#000000"> Beige </option>
+                <option value="#242020,#858181,#ffffff"> Midnight </option>
+                <option value="#b0ada0,#3E3F5B,#8cfad5"> Deep Sea </option>
+            </select>
+        </div>
 
-   
--->
+        <p> Created by SirNooby • 0.8.1</p>
+        <button id="save"> Save </button>
+        
+    </div>
+</div>
+
+<!-- Create the skeleton of the website-->
     <script src="script.js"></script>
 </body>
 
