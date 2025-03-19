@@ -96,14 +96,18 @@ digit.addEventListener("input", (event) => {
         document.getElementById("past_digit4").textContent = String(pi[current_digit])
         score.textContent = current_digit-1
         current_digit += 1;
-    } else if (user_digit == " " && current_digit >= 3) {
+    } else if (user_digit == " " && current_digit-1 > 3) {
         event.target.value = ""
         current_digit -= 1
-        document.getElementById("past_digit1").textContent = String(pi[current_digit - 2])
-        document.getElementById("past_digit2").textContent = String(pi[current_digit - 1])
-        document.getElementById("past_digit3").textContent = String(pi[current_digit])
-        document.getElementById("past_digit4").textContent = String(pi[current_digit+1])
+        document.getElementById("past_digit1").textContent = String(pi[current_digit - 4])
+        document.getElementById("past_digit2").textContent = String(pi[current_digit - 3])
+        document.getElementById("past_digit3").textContent = String(pi[current_digit - 2])
+        document.getElementById("past_digit4").textContent = String(pi[current_digit - 1])
         score.textContent = current_digit-1
+    } else if (user_digit == "INSTINCT") {
+        event.target.value = ""
+        document.body.style.backgroundImage = "url('Contents/image.png')"
+        document.body.style.backgroundSize = 300 + "px"
     }
     else {
         document.getElementById("score").textContent = "X"
