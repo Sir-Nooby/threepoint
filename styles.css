@@ -11,10 +11,6 @@
     font-size: 120%;
 }
 
-#title {
-    size: 50%;
-}
-
 /* Settings */
 .overlay {
     display: none;
@@ -28,7 +24,7 @@
     justify-content: center;
 }
 
-.settings-content {
+.modal-content {
     background-color: rgb(255, 255, 255);
     border: #cbc69c solid 6px;
     padding: 20px;
@@ -52,6 +48,7 @@
 
 /* Interactive Elements */
 
+
 .info-options {
     background-color: #cbc69c;
     border-radius: 5px;
@@ -70,13 +67,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 10vh;
+    top: 5vh;
     font-size: 5vw;
     position: relative;
     gap: 5vw;
 }
 
-#settings-button {
+.mode-options {
+    display: flex;
+    flex-direction: column;
+    font-size: 8vh;
+    gap: 5vh;
+}
+
+#settings-button, #mode-button {
     background-color: #f7f7f0;
     border-radius: 5px;
     padding: 5px;
@@ -87,11 +91,25 @@
 }
 
 #user_input {
-    border: none;
+    border-radius: 2px;
+    border: #000000 solid 2px;
     text-align: center;
     padding-left: 0vw;
-    width: 5vw;
+    font-size: 6vh;
+    width: 3vw;
     height: 10vh;
+}
+
+#lives-display {
+    display: none;
+    font-size: 2vw;
+    text-align: center;
+}
+
+#instructions {
+    display: fixed;
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 @media (max-width: 600px) {
@@ -115,4 +133,24 @@
     #score {
         font-size: 5vw;
     }
+
+    #instructions {
+        display: fixed;
+        font-size: 3vw;
+        text-align: center;
+        
+    }
+
+    #lives-display {
+        display: fixed;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    #settings-button, #mode-button {
+            background-color: #f7f7f0;
+            border-radius: 5px;
+            font-size: 2.5vh;
+            padding: 5px;
+        }
 }

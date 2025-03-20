@@ -8,28 +8,29 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <meta name="description" content=".">
+    <meta name="description" content="pi recitor tool">
     <meta name="author" content="SirNooby">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <!-- Create the skeleton of the website-->
-
 <body>
 
-    <div class="header-bar">
-        <p id="logo"> Three Point </p>
-    </div>
-
+<div class="header-bar">
+    <p id="logo"> Three Point </p>
+</div>
 
 <div class="info-options">
-    <p> Mode </p>
+    <button id="mode-button"> Modes </button>
     <p> || </p>
     <p id="score">0</p>
     <p> || </p>
     <button id="settings-button"> Settings </button>
 </div>
+
+<p id="lives-display"></p>
+<p id="instructions"> Type the digits inside the highlighted box. Get as many correct!</p>
 
 <div class="input_area">
     <span id="past_digit1"></span>
@@ -39,39 +40,64 @@
     <input id="user_input" type="tel" placeholder="?">
 </div>
 
+<!-- Modes -->
+<div id="modes" class="overlay">
+    <div class="modal-content">
+        <h2> Modes </h2>
+            <div class="mode-options">
+                <button id="endless"> Endless </button>
+                <button id="lives"> 3 Lives </button>
+                <button id="hardcore"> Hardcore </button>
+            </div>
+        </div>
+    </div>
+
 <!-- Settings -->
 <div id="settings" class="overlay">
-    <div class="settings-content">
+    <div class="modal-content">
         <h2> Settings </h2>
 
         <div class="setting-option">
-            <label for="contrast-mode"> High Contrast Mode </label>
+            <label for="contrast-mode"> Digit Underlines </label>
             <input type="checkbox" id="contrast-mode">
         </div>
-        
-        <!-- <div class="setting-option">
-            <label for="reset-score"> Test </label>
-            <input type="checkbox" id="reset-score">
-        </div> -->
+
+        <div class="setting-option">
+            <label for="color-indicators"> Color Indicators on Guess </label>
+            <input type="checkbox" id="color-indicators">
+        </div>
 
         <div class="setting-option">
             <label for="theme"> Theme </label>
             <select id="theme">
-                <option value="#f7f7f0,#cbc69c,#000000"> Beige </option>
-                <option value="#242020,#858181,#ffffff"> Midnight </option>
-                <option value="#b0ada0,#3E3F5B,#8cfad5"> Deep Sea </option>
-                <option value="#633ca6,#5890b8,#d1646f"> Instinct </option>
+                <option value="#f7f7f0,#cbc69c,#000000,Beige"> Beige </option>
+                <option value="#242020,#858181,#ffffff,Midnight"> Midnight </option>
+                <option value="#b0ada0,#3E3F5B,#8cfad5,Coral"> Coral </option>
+                <option value="#633ca6,#5890b8,#d1646f,Instinct"> Instinct </option>
+                <option value="#3F4F44,#2C3930,#DCD7C9,Earth"> Earth </option>
+                <option value="#A08963,#706D54,#DBDBDB,Wooden"> Wooden </option>
+                <option value="#C599B6,#E6B2BA,#FFF7F3,Pastel"> Pastel </option>
+                <option value="#205781,#4F959D,#F6F8D5,Seaside"> Seaside </option>
             </select>
         </div>
 
-        <p> Created by SirNooby • 0.8.2</p>
+        <p> Created by SirNooby • 1.0.0</p>
         <button id="save"> Save </button>
-        
+    </div>
+</div>
+
+<!-- End Screen -->
+<div id="end" class="overlay">
+    <div class="modal-content">
+        <h2> Game Over </h2>
+        <p id=score-display> Your score was 0 digits! </p>
+        <p id="highscore-display"> The current high score is 0 digits!</p>
+        <p> ------------------------------------------------------</p>
+        <button id="restart-button"> Restart </button>
     </div>
 </div>
 
 <!-- Create the skeleton of the website-->
     <script src="script.js"></script>
 </body>
-
 </html>
