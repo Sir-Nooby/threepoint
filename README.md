@@ -1,4 +1,4 @@
-ThreePoint - A Pi Recitor Tool
+ThreePoint - A Pi Reciter Tool
 
 Created in commemoration for Pi Day
 
