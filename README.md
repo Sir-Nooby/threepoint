@@ -2,4 +2,4 @@ ThreePoint - A Pi Reciter Tool
 
 Created in commemoration for Pi Day
 
-GLS4O
+Made for the GLS4O class!
