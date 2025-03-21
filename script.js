@@ -216,7 +216,6 @@ const highscore_display = document.getElementById("highscore-display")
 digit.addEventListener("input", (event) => {
 
     const user_digit = event.target.value;
-    backspacePressed = false;
 
     user_input.style.background = "#ffffff"
     color_indicators = color_indicator.checked
@@ -234,7 +233,6 @@ digit.addEventListener("input", (event) => {
             backspacePressed = false
         }
     });
-
     // Input checker
     if (player_lives > 0 || current_mode == "endless") {
         if (user_digit == pi[current_digit]) { // Normal
@@ -256,10 +254,6 @@ digit.addEventListener("input", (event) => {
             document.getElementById("past_digit3").textContent = String(pi[current_digit - 2]);
             document.getElementById("past_digit4").textContent = String(pi[current_digit - 1]);
             score.textContent = current_digit - 1;
-        } else if (user_digit == "INSTINCT") { // Instinct Egg
-            event.target.value = "";
-            document.body.style.backgroundImage = "url('Contents/image.png')";
-            document.body.style.backgroundSize = 300 + "px";
         } else { // Incorrect
             if (!backspacePressed) { // Backspace Checker
                 document.getElementById("score").textContent = "X";
