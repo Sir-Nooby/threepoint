@@ -127,6 +127,7 @@
 
     #user_input {
         width: 5vw;
+        font-size: 5vw;
         height: 10vh;
     }
 
@@ -150,7 +151,7 @@
     #settings-button, #mode-button {
             background-color: #f7f7f0;
             border-radius: 5px;
-            font-size: 2.5vh;
+            font-size: 2vh;
             padding: 5px;
         }
 }
