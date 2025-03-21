@@ -8,7 +8,7 @@ player_lives = 3
 //Call the file
 fetch("Contents/pi.txt")
     .then(response => response.text())
-    .then(data  => {
+    .then(data => {
         pi = data
         console.log("File content loaded! (1/3)")
     })
@@ -49,7 +49,7 @@ lives.addEventListener("click", () => {
     lives_display.textContent = "Lives: " + player_lives
     instructions.textContent = "Type the digits inside the highlighted box. You have 3 lives!"
     reset()
-    
+
 })
 
 hardcore.addEventListener("click", () => {
@@ -102,12 +102,12 @@ function loadSettings() {
         text_color = loaded_theme[2]
         theme_name = loaded_theme[3]
         theme.value = saved_theme
-        } else {
+    } else {
         background_color = "#f7f7f0"
         highlight_color = "#cbc69c"
         text_color = "#000000"
-        theme_name = "Beige"   
-        }
+        theme_name = "Beige"
+    }
 
     if (saved_contrastmode === "true") {
         high_contrast.checked = true
@@ -220,7 +220,7 @@ digit.addEventListener("input", (event) => {
 
     user_input.style.background = "#ffffff"
     color_indicators = color_indicator.checked
-    
+
     instructions.style.transition = "opacity 1.5s"
     instructions.style.opacity = 0
     setTimeout(() => {
@@ -236,7 +236,7 @@ digit.addEventListener("input", (event) => {
     });
 
     // Input checker
-    if (player_lives > 0) {
+    if (player_lives > 0 || current_mode == "endless") {
         if (user_digit == pi[current_digit]) { // Normal
             if (color_indicators) {
                 user_input.style.background = "#a1e6a6";
@@ -280,12 +280,12 @@ digit.addEventListener("input", (event) => {
             highscore_display.textContent = "Your best score is " + String(best_score) + " digits!";
             localStorage.setItem("best_score", best_score);
         }
-}
+    }
 })
 //Restart Button
 const restart_button = document.getElementById("restart-button")
 
 restart_button.addEventListener("click", () => {
     end_overlay.style.display = "none"
-    reset()   
+    reset()
 })
